@@ -1,50 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
   <link rel="stylesheet" href="styles.css">
-  <head>
-
-  </head>
-  <body>
-    <h1 id = "title">SURVEY FORM</h1>
-    <p id = "description">Welcome. Kindly fill the foem below</p>
-    <form id ="survey-form">
-      <fieldset>
-        <label id = "name-label">Enter your name: <input id ="name" type="text" placeholder="Enter your name"required></input></label>
-        <label id ="email-label">Enter your email: <input id="email" type="email" placeholder="Enter your email" required></input></label>
-        <label id ="number-label">Enter your age: <input id="number" type="number" min ="18" max="80" placeholder=" age"required></input></label>
-       <label>Select the option that suits you best
-        <select id ="dropdown">
-          <option>select one</option>
-          <option>Student</option>
-          <option>Unemployed</option>
-          <option>Employed</option>
-          </select>
-          </label>
-        </fieldset>
-   <fieldset>
-    <label>How did you hear about us?
-      <input type="radio" name="name" value="1">Linked in</input>
-      <input type="radio" name="name" value="2">Our website</input>
-      <input type="radio" name="name" value="3">Our social media</input>
-      <input type="radio" name="name" value="4">Referral</input>
-    </label>
-
+</head>
+<body>
+  <h1 id="title">SURVEY FORM</h1>
+  <p id="description">Welcome. Kindly fill the form below.</p>
+  <form id="survey-form">
+    <fieldset>
+      <div class="form-row">
+        <label id="name-label" for="name">Enter your name:</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+      </div>
+      <div class="form-row">
+        <label id="email-label" for="email">Enter your email:</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-row">
+        <label id="number-label" for="number">Enter your age:</label>
+        <input id="number" type="number" min="18" max="80" placeholder="Age" required>
+      </div>
+      <div class="form-row">
+        <label for="dropdown">Select the option that suits you best:</label>
+        <select id="dropdown">
+          <option value="">Select one</option>
+          <option value="student">Student</option>
+          <option value="unemployed">Unemployed</option>
+          <option value="employed">Employed</option>
+        </select>
+      </div>
     </fieldset>
     <fieldset>
-      <label>Select the frameworks you are familiar with
-        <input type ="checkbox" value="4">React</input>
-        <input type ="checkbox" value="5">Node</input>
-        <input type ="checkbox" value="6">Django</input>
-        <input type ="checkbox" value="7">Angular</input>
-        <input type ="checkbox" value="8">Express</input>
-      </label>
-      </fieldset>
-      <fieldset>
-      <label>Comment
-        <textarea type ="bio" rows="3" cols="30" placeholder="your Bio"></textarea>
-      </label>
-      </fieldset>
-        <input type="submit" id="submit" value= "Submit"></input>
-    </form>
-  </body>
+      <legend>How did you hear about us?</legend>
+      <div class="form-row">
+        <label for="linkedin">LinkedIn</label>
+        <input type="radio" name="referral" value="1" id="linkedin">
+      </div>
+      <div class="form-row">
+        <label for="website">Our website</label>
+        <input type="radio" name="referral" value="2" id="website">
+      </div>
+      <div class="form-row">
+        <label for="social-media">Our social media</label>
+        <input type="radio" name="referral" value="3" id="social-media">
+      </div>
+      <div class="form-row">
+        <label for="referral">Referral</label>
+        <input type="radio" name="referral" value="4" id="referral">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Select the frameworks you are familiar with:</legend>
+      <div class="form-row">
+        <label for="react">React</label>
+        <input type="checkbox" class="inline" value="react" id="react">
+      </div>
+      <div class="form-row">
+        <label for="node">Node</label>
+        <input type="checkbox" class="inline" value="node" id="node">
+      </div>
+      <div class="form-row">
+        <label for="django">Django</label>
+        <input type="checkbox" class="inline" value="django" id="django">
+      </div>
+      <div class="form-row">
+        <label for="angular">Angular</label>
+        <input type="checkbox" class="inline" value="angular" id="angular">
+      </div>
+      <div class="form-row">
+        <label for="express">Express</label>
+        <input type="checkbox" class="inline" value="express" id="express">
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="form-row">
+        <label for="bio">Comment:</label>
+        <textarea id="bio" rows="3" cols="30" placeholder="Your Bio"></textarea>
+      </div>
+    </fieldset>
+    <input type="submit" id="submit" value="Submit">
+  </form>
+</body>
 </html>
